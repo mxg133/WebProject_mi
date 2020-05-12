@@ -31,6 +31,59 @@
 .topbar li{
     float: left;
 }
+/* 开启相对定位 */
+.app{
+    position: relative;
+}
+/* 设置app下的小三角 */
+.app-wrapper:hover .app::after{
+    content: '';
+    /* 设置绝对定位 */
+    position: absolute;
+    bottom: 0;
+    /* 设置水平居中 */
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 1;
+    width: 0;
+    height: 0;
+    /* 设置4哥边框 */
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 单独设置下边框的颜色 */
+    border-bottom-color: #fff;
+}
+
+/* 设置下载app的下拉 */
+.app .qrcode{
+        /* 设置隐藏 */
+        display: none;
+    position: absolute;
+    left: 22px;
+    margin-left: -62px;
+    width: 124px;
+    height: 148px;
+    line-height: 1;
+    text-align: center;/* 水平居中 */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+li:hover > .app .qrcode{
+    display: block;
+}
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+/* 设置二维码下的文字 */
+.app .qrcode span{
+    font-size: 14px;
+    color: #000;
+}
 /* 设置右侧导航栏 */
 .shop-cart,
 .user-info{
