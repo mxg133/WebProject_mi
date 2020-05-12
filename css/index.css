@@ -36,8 +36,10 @@
     position: relative;
 }
 /* 设置app下的小三角 */
-.app-wrapper:hover .app::after{
+/* .app-wrapper:hover .app::after{ */
+    .app::after{
     content: '';
+    display: none;
     /* 设置绝对定位 */
     position: absolute;
     bottom: 0;
@@ -48,31 +50,40 @@
     line-height: 1;
     width: 0;
     height: 0;
-    /* 设置4哥边框 */
+    /* 设置4个边框 */
     border: 8px solid transparent;
     /* 去除上边框 */
     border-top: none;
     /* 单独设置下边框的颜色 */
     border-bottom-color: #fff;
 }
-
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+/* li:hover > .app .qrcode{
+    display: block;
+} */
 /* 设置下载app的下拉 */
 .app .qrcode{
         /* 设置隐藏 */
-        display: none;
+    /* display: none; */
     position: absolute;
     left: 22px;
     margin-left: -62px;
     width: 124px;
-    height: 148px;
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
     line-height: 1;
     text-align: center;/* 水平居中 */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    /* transition: ;用于为样式设置过渡效果 */
+    transition: height 0.3s;
 }
-li:hover > .app .qrcode{
-    display: block;
-}
+
 /* 设置二维码图片 */
 .app .qrcode img{
     width: 90px;
