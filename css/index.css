@@ -117,3 +117,80 @@
 .topbar i{
     margin-right: 2px;
 }
+
+/* 设置中间的header */
+.header{
+    height: 100px;
+    /* background-color: #bfa; */
+}
+/* 设置logo中h1的样式 */
+.header .logo{
+    float: left;
+    margin-top: 22px;  
+    width: 55px;
+    height: 55px; 
+    position: relative;
+    overflow: hidden;
+    /* 隐藏logo中的文字 */
+    text-indent: -999px;
+}
+/* 统一设置logo的超链接 */
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px; 
+    background-color: #ff6700;
+    background-image: url(../img/mi-logo.png);
+    background-position: center; 
+    left: 0;
+    transition: left 0.3s;
+}
+/* 设置home图标 */
+.header .logo .home{
+    background-image: url(../img/mi-home.png);
+    left: -55px;
+}
+/* 设置鼠标移入后，两个图标的位置 */
+.header .logo:hover .mi{
+    left: 55px;
+    
+}
+.header .logo:hover .home{
+    left: 0;
+    
+}
+
+/* 设置中间导航条 */
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+.header .nav{
+    /* width: 792px; */
+    height: 100px;
+    /* 文字垂直居中 */
+    line-height: 100px;
+    padding-left: 58px;
+
+}
+/* 设置导航条中的li */
+.nav-wrapper li{
+    float: left;
+
+}
+.nav-wrapper li a{
+    /* 使超链接成为块元素 */
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+
+
+/* 隐藏全部商品 */
+.all-goods{
+    /* 隐藏仍然占据页面位置 */
+    visibility: hidden;
+}
