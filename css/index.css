@@ -117,11 +117,13 @@
 .topbar i{
     margin-right: 2px;
 }
+.header-wrapper{
+    position: relative;
+}
 
 /* 设置中间的header */
 .header{
     height: 100px;
-    /* background-color: #bfa; */
 }
 /* 设置logo中h1的样式 */
 .header .logo{
@@ -153,11 +155,9 @@
 /* 设置鼠标移入后，两个图标的位置 */
 .header .logo:hover .mi{
     left: 55px;
-    
 }
 .header .logo:hover .home{
     left: 0;
-    
 }
 
 /* 设置中间导航条 */
@@ -171,12 +171,10 @@
     /* 文字垂直居中 */
     line-height: 100px;
     padding-left: 58px;
-
 }
 /* 设置导航条中的li */
 .nav-wrapper li{
     float: left;
-
 }
 .nav-wrapper li a{
     /* 使超链接成为块元素 */
@@ -188,9 +186,74 @@
     color: #ff6700;
 }
 
-
 /* 隐藏全部商品 */
 .all-goods{
     /* 隐藏仍然占据页面位置 */
     visibility: hidden;
+}
+
+.nav .goods-info{
+    /* height: 228px; */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+/* .nav li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(9)):hover ~ .goods-info, */
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover {/* 下拉不消失 */
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
+
+/* 设置搜索框的容器 */
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+}
+
+.search-wrapper .search-inp{
+    box-sizing: border-box;
+    width: 244px;
+    border: none;
+    float: left;
+    padding: 0 10px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    outline: none;
+}
+
+/* 设置input获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + button{
+    border-color: #FF6700;
+}
+
+.search-wrapper .search-btn{
+    float: left;
+    height: 50px;
+    width: 52px;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+}
+
+.search-wrapper .search-btn:hover{
+    background-color: #FF6700;
+    color: white;
+    border: none;
 }
