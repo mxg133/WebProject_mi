@@ -134,7 +134,7 @@
     position: relative;
     overflow: hidden;
     /* 隐藏logo中的文字 */
-    text-indent: -999px;
+    text-indent: -9999px;
 }
 /* 统一设置logo的超链接 */
 .header .logo a{
@@ -172,15 +172,48 @@
     line-height: 100px;
     padding-left: 58px;
 }
+
 /* 设置导航条中的li */
-.nav-wrapper li{
+.nav > li{
     float: left;
+}
+.all-goods-wrapper{
+    position: relative;
+    background-color: red;
+}
+/* 设置左侧导航条的样式 */
+.left-menu{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    z-index: 999;
+    left: -120px;
+    line-height: 1;
+}
+ul .left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+    margin-right: 0;
+    font-size: 14px;
+}
+ul .left-menu li a:hover{
+    color: white;
+    background-color: #ff6700;
+}
+.left-menu a i{
+    float: right;
+    line-height: 42px;
 }
 .nav-wrapper li a{
     /* 使超链接成为块元素 */
     display: block;
     font-size: 16px;
     margin-right: 20px;
+    padding: 0 30px;
 }
 .nav-wrapper li a:hover{
     color: #ff6700;
