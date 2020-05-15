@@ -362,6 +362,7 @@ ul.left-menu li a:hover{
 }
 .prev-next .prev{
     left: 234px;
+    /* 背景图的位置 */
     background-position: -84px 0;
 }
 .prev-next .prev:hover{
@@ -374,4 +375,23 @@ ul.left-menu li a:hover{
 .prev-next .next:hover{
     right: 0;
     background-position: -42px 0;
+}
+
+/* 设置左下角的回到顶部导航条 */
+.back-top{
+    width: 26px;
+    height: 206px;
+    background-color: orange;
+    /* 开启固定定位 */
+    position: fixed;
+    right: 50%;
+    margin-right: -639px;
+    bottom: 60px;
+    /* 
+        布局的等式
+            left + margin-left + width + margin-right + right = 视口的宽度
+            auto +      0      +  26   +      0       +   60  = 视口宽度
+            auto +      0      +  26   +     -639px   +   50% = 视口宽度
+            left 不能写死！！！！！必须自动计算
+    */
 }
