@@ -1,87 +1,91 @@
 /* 主页index.html的样式表 */
+
 /* 顶部导航条的容器 */
 .topbar-wrapper{
-    /* 设置宽度是全屏 */
+    /* 设置宽度全屏 */
     width: 100%;
     /* 设置高度和行高 */
     height: 40px;
     line-height: 40px;
     /* 设置背景颜色 */
-    background-color: #333333;
+    background-color: #333;
 }
 /* 设置超链接的颜色 */
 .topbar a{
-    display: block;
     font-size: 12px;
     color: #b0b0b0;
+    display: block;
 }
-/* 超链接移入的效果 */
+
+/* 设置超链接移入的效果 */
 .topbar a:hover{
     color: #fff;
 }
-/* 设置中间的分割线 */
+
+/* 设置中间分割线 */
 .topbar .line{
     font-size: 12px;
     color: #424242;
     margin: 0 8px;
-    margin-top: -1px;
 }
+
 /* 设置左侧导航栏 */
-.service,
-.topbar li{
+.service, .topbar li{
     float: left;
 }
-/* 开启相对定位 */
 .app{
     position: relative;
 }
 /* 设置app下的小三角 */
-/* .app-wrapper:hover .app::after{ */
-    .app::after{
+/* .app-wrapper:hover > .app::after{ */
+.app::after{
     content: '';
     display: none;
     /* 设置绝对定位 */
     position: absolute;
-    bottom: 0;
-    /* 设置水平居中 */
-    left: 0;
-    right: 0;
-    margin: auto;
-    line-height: 1;
     width: 0;
     height: 0;
-    /* 设置4个边框 */
+    /* 设置四个方向的边框 */
     border: 8px solid transparent;
     /* 去除上边框 */
     border-top: none;
     /* 单独设置下边框的颜色 */
     border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
 }
+
 .app:hover .qrcode,
 .app:hover::after{
     display: block;
     height: 148px;
 }
-/* li:hover > .app .qrcode{
+
+/* .app-wrapper:hover>.app .qrcode{
     display: block;
+
 } */
 /* 设置下载app的下拉 */
 .app .qrcode{
-        /* 设置隐藏 */
     /* display: none; */
     position: absolute;
-    left: 22px;
-    margin-left: -62px;
+    left: -40px;
     width: 124px;
     /* height: 148px; */
     height: 0;
     overflow: hidden;
+    /* margin-left: -62px; */
     line-height: 1;
-    text-align: center;/* 水平居中 */
+    text-align: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    /* transition: ;用于为样式设置过渡效果 */
+
+    /* transition: 用于为样式设置过渡效果 */
     transition: height 0.3s;
+
+    z-index: 9999;
 }
 
 /* 设置二维码图片 */
@@ -90,85 +94,98 @@
     margin: 17px;
     margin-bottom: 10px;
 }
-/* 设置二维码下的文字 */
+
+/* 设置二维码中的文字 */
 .app .qrcode span{
     font-size: 14px;
     color: #000;
 }
+
 /* 设置右侧导航栏 */
-.shop-cart,
-.user-info{
+.shop-cart, .user-info{
     float: right;
 }
+
 .shop-cart{
     margin-left: 26px;
 }
+
 /* 设置购物车的样式 */
 .shop-cart a{
     width: 120px;
     background-color: #424242;
-    /* 设置水平居中 */
     text-align: center;
 }
+
 .shop-cart:hover a{
-    color: #ff6700;
     background-color: #fff;
+    color: #FF6700;
 }
-.topbar i{
+
+.shop-cart i{
     margin-right: 2px;
 }
+
 .header-wrapper{
+    /* background-color: red; */
     position: relative;
 }
 
 /* 设置中间的header */
 .header{
     height: 100px;
+    /* background-color: #ff0; */
 }
-/* 设置logo中h1的样式 */
+
+/* 设置logo的h1 */
 .header .logo{
     float: left;
-    margin-top: 22px;  
+    margin-top: 22px;
     width: 55px;
-    height: 55px; 
+    height: 55px;
     position: relative;
     overflow: hidden;
     /* 隐藏logo中的文字 */
-    text-indent: -9999px;
+    text-indent: -9999px
 }
+
 /* 统一设置logo的超链接 */
 .header .logo a{
     position: absolute;
     width: 55px;
-    height: 55px; 
-    background-color: #ff6700;
-    background-image: url(../img/mi-logo.png);
-    background-position: center; 
+    height: 55px;
     left: 0;
+    background-color: #FF6700;
+    background-image: url(../img/mi-logo.png);
+    background-position: center;
     transition: left 0.3s;
 }
-/* 设置home图标 */
+
+/* 设置home图片 */
 .header .logo .home{
     background-image: url(../img/mi-home.png);
     left: -55px;
 }
-/* 设置鼠标移入后，两个图标的位置 */
+
+/* 设置鼠标移入以后两个图标的位置 */
 .header .logo:hover .mi{
     left: 55px;
 }
+
 .header .logo:hover .home{
     left: 0;
 }
 
-/* 设置中间导航条 */
+/* 设置中间的导航条 */
 .header .nav-wrapper{
     float: left;
     margin-left: 7px;
 }
+
+/* 设置导航条 */
 .header .nav{
     /* width: 792px; */
     height: 100px;
-    /* 文字垂直居中 */
     line-height: 100px;
     padding-left: 58px;
 }
@@ -177,10 +194,11 @@
 .nav > li{
     float: left;
 }
+
 .all-goods-wrapper{
     position: relative;
-    background-color: red;
 }
+
 /* 设置左侧导航条的样式 */
 .left-menu{
     width: 234px;
@@ -191,37 +209,41 @@
     z-index: 999;
     left: -120px;
     line-height: 1;
+
 }
-ul .left-menu li a{
+
+ul.left-menu li a{
     display: block;
     height: 42px;
     line-height: 42px;
     color: white;
     margin-right: 0;
+    padding: 0 30px;
     font-size: 14px;
 }
-ul .left-menu li a:hover{
+
+ul.left-menu li a:hover{
     color: white;
-    background-color: #ff6700;
+    background-color: #FF6700;
 }
+
 .left-menu a i{
     float: right;
     line-height: 42px;
 }
+
 .nav-wrapper li a{
-    /* 使超链接成为块元素 */
     display: block;
     font-size: 16px;
     margin-right: 20px;
-    padding: 0 30px;
 }
+
 .nav-wrapper li a:hover{
-    color: #ff6700;
+    color: #FF6700;
 }
 
 /* 隐藏全部商品 */
 .all-goods{
-    /* 隐藏仍然占据页面位置 */
     visibility: hidden;
 }
 
@@ -289,4 +311,67 @@ ul .left-menu li a:hover{
     background-color: #FF6700;
     color: white;
     border: none;
+}
+
+/* 设置banner */
+.banner{
+    position: relative;
+    height: 460px;
+}
+
+.banner .img-list li{
+    position: absolute;
+}
+.banner img{
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 设置5个导航点 */
+.pointer{
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+
+.pointer a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 2px rgba(255, 255, 255, .4) solid;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    margin-left: 6px;
+}
+
+.pointer a:hover,
+.pointer a.active{
+    border-color: rgba(0, 0, 0, .4);
+    background-color:rgba(255, 255, 255, .4);
+}
+
+/* 设置两个箭头 */
+.prev-next a{
+    width: 41px;
+    height: 69px;
+    background-image: url(../img/icon-slides.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.prev-next .prev{
+    left: 234px;
+    background-position: -84px 0;
+}
+.prev-next .prev:hover{
+    background-position: 0 0;
+}
+.prev-next .next{
+    right: 0;
+    background-position: -125px 0;
+}
+.prev-next .next:hover{
+    right: 0;
+    background-position: -42px 0;
 }
