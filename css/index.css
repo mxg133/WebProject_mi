@@ -81,10 +81,8 @@
     text-align: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-
     /* transition: 用于为样式设置过渡效果 */
     transition: height 0.3s;
-
     z-index: 9999;
 }
 
@@ -394,4 +392,99 @@ ul.left-menu li a:hover{
             auto +      0      +  26   +     -639px   +   50% = 视口宽度
             left 不能写死！！！！！必须自动计算
     */
+}
+
+/* 设置下部的广告区域 */
+.ad{
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ad .shortcut,
+.ad .imgs,
+.ad li{
+    float: left;
+}
+
+/* 设置左侧快捷方式 */
+.ad .shortcut{
+    width: 228px;
+    height: 168px;
+    background-color: #5f5750;
+    margin-right: 14px;
+    padding-top: 2px;
+    padding-left: 6px;
+}
+.ad .shortcut li{
+    position: relative;
+}
+
+/* 设置上边框 */
+.ad .shortcut li::before{
+    content: '';
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    /* 设置居中 */
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto
+}
+
+/* 设置左边框 */
+.ad .shortcut li::after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 1px;
+    background-color: #665e57;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0;
+
+}
+
+/* 设置快捷方式中的超链接 */
+.ad .shortcut a{
+    /* 让其独占一行 */
+    display: block;
+    color: #cfccca;
+    height: 84px;
+    width: 76px;
+    /* 设置水平居中 */
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ad .shortcut a:hover{
+    color: #fff;
+}
+
+/* 设置图标字体 */
+.ad .shortcut i{
+    /* 让其独占一行 */
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+
+/* 设置左侧的图片 */
+.ad .imgs li{
+    width: 316px;
+    margin-right:15px; 
+}
+
+.ad .imgs li:last-child{
+    margin: 0;
+}
+
+.ad .imgs img{
+    width: 100%;
+    vertical-align: top;
 }
